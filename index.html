@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h2>霊と力丶相談所</h2>
+		<h2>霊と力丶相談所</h2>
+		<h2>霊と力丶相談所</h2>
+		<div class="stars">
+			<div>
+				<img src="./etoile-violet.png" alt="purple star" />
+				<img src="./etoile-jaune.png" alt="purple star" />
+			</div>
+			<div>
+				<img src="./etoile-violet.png" alt="purple star" />
+				<img src="./etoile-bleue.png" alt="purple star" />
+			</div>
+		</div>
+
+		<div class="king">あの <span>妖怪大王</span> を倒した ! !</div>
+		<p class="century">2 1 世杞の新生 - 雲能力者</p>
+
+		<div class="reigen_container">
+			<img src="./reigen.png" class="reigen" />
+			<p>の</p>
+		</div>
+
+		<div class="welcome">
+			<p>ホ一厶ヘ一シヘ</p>
+			<p>ようこそ ! !</p>
+		</div>
+
+		<div class="enter">
+			<div class="arrow_container">
+				<img src="./arrow.png" />
+				<img src="./arrow.png" />
+			</div>
+
+			<img src="./enter.png" class="enter_image" />
+
+			<div class="arrow_container reverse">
+				<img src="./arrow_reverse.png" />
+				<img src="./arrow_reverse.png" />
+			</div>
+		</div>
+
+		<div class="count">
+			<p>あなたは</p>
+			<div class="compteur">
+				<p id="visitors"></p>
+			</div>
+			<p>人目の訪問者です</p>
+		</div>
+	</body>
+
+	<script>
+		function pad(num, size) {
+			num = num.toString()
+			while (num.length < size) num = "0" + num
+			return num
+		}
+
+		function cb(response) {
+			document.getElementById("visitors").innerText = pad(response.value - 1, 15)
+		}
+	</script>
+	<script async src="https://api.countapi.xyz/hit/nymeku.github.io/visits?callback=cb"></script>
+</html>

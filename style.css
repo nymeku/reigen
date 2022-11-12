@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.cdnfonts.com/css/cursed-timer-ulil");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--font: "DotGothic16", sans-serif;
+	--cursed: "Cursed Timer ULiL", sans-serif;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url("https://spiritsandsuch.com/wp-content/uploads/2019/02/repeatingbackground.jpg");
+}
+
+h2 {
+	position: fixed;
+	font-size: 80px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	background: -webkit-linear-gradient(#601c3f, #877f01, #7f880f, #287a51);
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	transform: perspective(100px) rotateX(10deg);
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #601c3f;
+}
+
+h2:first-child {
+	z-index: 3;
+}
+
+h2:nth-child(2) {
+	-webkit-text-stroke-width: 10px;
+	-webkit-text-stroke-color: #fff;
+	z-index: 2;
+}
+
+h2:nth-child(3) {
+	z-index: 1;
+	-webkit-text-stroke-width: 20px;
+	-webkit-text-stroke-color: #19c927;
+}
+
+.stars {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.stars,
+div {
+	display: flex;
+	gap: 10px;
+}
+
+.stars > div > img {
+	width: 80px;
+}
+
+.king {
+	font-family: var(--font);
+	font-size: 60px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.king > span {
+	font-size: 100px;
+	color: #aa1210;
+	text-decoration: underline;
+}
+
+.king > span:hover {
+	cursor: pointer;
+}
+
+.century {
+	font-family: var(--font);
+	font-size: 50px;
+}
+
+.reigen_container {
+	display: flex;
+	font-family: var(--font);
+	font-size: 40px;
+	align-items: flex-end;
+}
+
+.reigen {
+	width: 800px;
+	transform: rotate(-0.8deg);
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #70cde2;
+	font-size: 50px;
+}
+
+.welcome > p {
+	text-shadow: 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+.enter {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.arrow_container > img {
+	width: 80px;
+}
+
+.enter_image {
+	width: 300px;
+}
+
+.arrow_container > img:first-child {
+	animation: arrow_reverse 2s infinite;
+}
+
+.arrow_container > img:nth-child(2) {
+	animation: arrow_reverse 2s 0.5s infinite;
+}
+
+.reverse > img {
+	transform: rotate(180deg);
+}
+
+@keyframes arrow {
+	0% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes arrow_reverse {
+	0% {
+		transform: translateX(20px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.count {
+	font-size: 40px;
+	font-family: var(--font);
+	display: flex;
+	align-items: center;
+}
+
+.compteur {
+	background-color: #000;
+	width: fit-content;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	outline: 5px inset green;
+}
+
+.compteur > p {
+	color: green;
+	font-family: var(--cursed);
+}
